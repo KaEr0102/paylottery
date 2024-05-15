@@ -21,7 +21,7 @@ class Index extends BaseController
         }
         if ($model){
             $pay = new Didapay();
-            $res = $pay->recharge();
+            $res = $pay->recharge($model);
             if ($res['status']==200){
                 $model->url = $res['data']['paymentInfo'];
                 $model->transaction_id =  $res['data']['platOrderNo'];
