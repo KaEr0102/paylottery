@@ -64,7 +64,7 @@ class Didapay extends Payment
 
     public function callbackUrl($type)
     {
-        return  env('H5_URL').'/callback/didapay/'.$type;
+        return  env('NOTICE_URL').'/callback/'.$type;
     }
 
 }
