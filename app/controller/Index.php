@@ -2,6 +2,8 @@
 namespace app\controller;
 
 use app\BaseController;
+use app\model\Recharge;
+use payment\Didapay;
 
 class Index extends BaseController
 {
@@ -11,6 +13,8 @@ class Index extends BaseController
     }
 
     public function pay(){
-
+        $order = Recharge::where('status',0)->find();
+        $pay = new Didapay();
+        $pay->recharge($order);
     }
 }
