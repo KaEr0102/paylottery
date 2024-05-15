@@ -4,9 +4,9 @@ namespace payment;
 
 class Didapay extends Payment
 {
-    private $baseUrl = 'https://apidevpo.didapay.club';
-    private $merchantNo = 'M1000';
-    private $private_key = "-----BEGIN RSA PRIVATE KEY-----\nMIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBALzGcqb7y4Rhm3tLGp2X5F1o4qtd2OdQH7UoFaoa8SElClTD7evxok0QX7TneFbIE8AiijcwOGdsLkzBuB7rSmve9+XozkVGZ6zqhpadParIAPuxmaqTM1g6u/Wo5G8eUi1+QOuG1+EfcaZ8C8qisDWERzHN9XrlKxScmncA83LFAgMBAAECgYBvruSkADIe5vRq1Dsx42w7C1OXWRV7fH7V2Zo/omLoXhanoadAQRvphfdpesxKY2Kz+HtXPVMRdQJLbQy2VjQXa5ifUQja6RMZZLiTCjDzykDy055oIEVSgD/VrqEFiLDRNVhGLE9+LKHIDmH5eLk0jZHH4jCpg0IA4fIlG4mOYQJBAN3M6gHS3wevR0xjHnSk5nObXbHaqvc5pCzJYKgBRDrz9hvc+JZZ6/hoieOdmOUrfAfzuA6n1KKDcnFxo+0P/V0CQQDZ4e8kT9OLNehytsKfnTKEmo/3AmfJQlvu7TpT7DtS4erwa8GguqG3J+2C/efuvhKEBAz75CLnTHwNcPhUzoyJAkEA3KSbaYMHoZJpQAEea/Ua14iINYSNLPEnc/JEd/0Cjg7hFijFFnSPvIbqHQdK8TdH5HU79UBZ0+0lbNsaspqEdQJAAQOVKlUYxfAVSdth4n5HyugxPVQMiZo+dUkzWUqjKAqXHlFSEF5t/D06VL67wpet3GFscguowezQMvvQnAxuCQJBALHxgmr8/u+UCM7+J9WlhnhaIFoXTkeztndAvyTdSQ9/vaJu0v79lrQZHGmwXP5A+1uGGL1Tif8NhY2U7CkzJCg=\n-----END RSA PRIVATE KEY-----";
+    private $baseUrl = 'https://api.didapay.club';
+    private $merchantNo = 'G5431';
+    private $private_key = "-----BEGIN RSA PRIVATE KEY-----\nMIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBANngdNbj4/I9pZwRsyDDWJOHfxwNY5QFJNTG1v4z6qxO1SRGrOMH4LmSd23yptcr1L+JRIJZBzm9F9BhMGqBgwK+ScmPTcd7bR2yChzlRR44eZWQiuudnfEG0DPjKIqNjo3xVzD8hFLWNgZBHkBt9+ByExRStD3uvLuE9xItBbN7AgMBAAECgYBTLAYuSkyoGrRvwan55diYaO8zDEFpLhWDTGyiGbuKD4X6FSjGeillbe49gJYEKe1LOOF4SPgjKHZAy/kpj0stOiS2/tECceq5MOXIKPEcNVABFOOkPqY/jqRgLd5z5re39Nf9A9ySTPUAIEM8+cG1D0Z3NTDe5Tg/MfJ3V2Bk8QJBAP2sj/n3G9vW3SBwfwZEdXk+iOT9YE9Ok1P9hqvrRiH4C6vFEF136T+v/oCBP2l91O6onotwr14Y4SyQJFnFRC8CQQDb395f3N5jYvmzj/y4XyKx940PYASPQwC8dnjiMx5svOUSgrK0MX5tK5/GoveX4YzISU0oiNS4EJ8d6nIyNpZ1AkEArtL0TsL8kh+cObUN9dXMWAi+84GjlESEyIea/nSg2txFvtWLF7+CIoA6F3n7p8ouq2POEC9SzLi8xqd4Rd3rxQJAJNIdrFIRj/VAObjQKpQL/F+naL68pL0kv2rbnY3P94e+mNX4VULAmEmo7RvXeMDV0ais2i/n55co/lqHmy8XDQJBAJUeMC7gHSrlFMwVAGqIqu2Kj+2lVszGN9IOhpvgwKdrdqfkeCNnPcSg7KDrdxzubGHOScTMXBxogc0dgu8j6gY=\n-----END RSA PRIVATE KEY-----";
 
     /**
      * 获取签名
