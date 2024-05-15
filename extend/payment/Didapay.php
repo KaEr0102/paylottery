@@ -26,7 +26,7 @@ class Didapay extends Payment
             }
         }
         //解析私钥
-        $res = openssl_pkey_get_private($this->privateKey);
+        $res = openssl_pkey_get_private($this->private_key);
         $content = '';
         //使用私钥加密
         foreach (str_split($request_data, 117) as $str1) {
