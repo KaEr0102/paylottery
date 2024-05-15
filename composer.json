@@ -1,35 +1,33 @@
 {
-    "name": "pay/think",
-    "description": "pay",
+    "name": "topthink/think",
+    "description": "the new thinkphp framework",
     "type": "project",
     "keywords": [
         "framework",
         "thinkphp",
         "ORM"
     ],
-    "homepage": "http://thinkphp.cn/",
+    "homepage": "https://www.thinkphp.cn/",
     "license": "Apache-2.0",
     "authors": [
         {
             "name": "liu21st",
             "email": "liu21st@gmail.com"
+        },
+        {
+            "name": "yunwuxin",
+            "email": "448901948@qq.com"
         }
     ],
     "require": {
-        "php": ">=7.0.0",
-        "topthink/framework": "v6.1.*",
+        "php": ">=7.2.5",
+        "topthink/framework": "^6.1.0",
         "topthink/think-orm": "^2.0",
-        "topthink/think-multi-app":"v1.0.*",
-        "topthink/think-view": "v1.0.*",
-        "topthink/think-image": "^1.0",
-        "topthink/think-queue": "^3.0",
-        "topthink/think-captcha": "^3.0",
-        "topthink/think-helper": "^3.1",
-        "topthink/think-filesystem": "v2.0.2"
+        "topthink/think-filesystem": "^1.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^4.2",
-        "topthink/think-trace":"^1.0"
+        "topthink/think-trace": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -40,19 +38,12 @@
         }
     },
     "config": {
-        "preferred-install": "dist",
-        "optimize-autoloader":true
+        "preferred-install": "dist"
     },
     "scripts": {
         "post-autoload-dump": [
             "@php think service:discover",
             "@php think vendor:publish"
         ]
-    },
-    "repositories": {
-        "packagist": {
-            "type": "composer",
-            "url": "https://mirrors.aliyun.com/composer/"
-        }
     }
 }
