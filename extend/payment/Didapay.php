@@ -49,7 +49,7 @@ class Didapay extends Payment
             'merchantNo'=>$this->merchantNo,
             'method'=>'UPI',
             'merchantOrderNo'=>$order['id_order'],
-            'payAmount'=>$order.['money'],
+            'payAmount'=>$order['money'],
             'mobile'=>$order['phone'],
             'name'=>'username',
             'email'=>'pay@gmail.com',
