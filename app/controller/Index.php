@@ -13,8 +13,11 @@ class Index extends BaseController
     }
 
     public function pay(){
-        $order = Recharge::where('status',0)->find();
-        $pay = new Didapay();
-        $pay->recharge($order);
+        $model = Recharge::where('status',0)->find();
+        if ($model){
+            $pay = new Didapay();
+            $pay->recharge($model->toArray());
+        }
+
     }
 }
