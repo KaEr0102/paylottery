@@ -25,7 +25,7 @@ class Callback extends BaseController
                 $recharge->status = 1;
                 $recharge->save();
                 //用户余额更改
-                $user = new Users();
+                $user =Users::where('phone',$recharge->phone)->find();
                 $user->money = $user->money+$recharge->money;
                 $user->save();
             }
