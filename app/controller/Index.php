@@ -13,10 +13,18 @@ class Index extends BaseController
     }
 
     public function pay(){
-        $model = Recharge::where('status',0)->find();
+        $model = Recharge::where('status',0)->where('url','<>','')->find();
         if ($model){
             $pay = new Didapay();
-            $pay->recharge($model->toArray());
+            $res = $pay->recharge();
+            if ($res['status']==200){
+                $model->url = $res['data']['paymentInfo'];
+                $model->transaction_id =  $res['data']['platOrderNo'];
+                $model->save();
+                return json(['status'=>200,'msg'=>'获取支付url','data'=>$model->url]);
+            }
+        }else{
+            return json(['status'=>201,'msg'=>'订单不存在']);
         }
 
     }

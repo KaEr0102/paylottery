@@ -42,8 +42,9 @@ class Didapay extends Payment
      * 充值
      * @return void
      */
-    public function recharge($order)
+    public function recharge($model)
     {
+        $order = $model->toArray();
         $params = [
             'merchantNo'=>$this->merchantNo,
             'method'=>'UPI',
@@ -58,7 +59,7 @@ class Didapay extends Payment
         ];
         $params['sign']= $this->getSign($params);
         $res = $this->curl_post($params,$this->baseUrl.'/api/payin');
-        dump($res);
+        return json_decode($res,true);
     }
 
     public function callbackUrl($type)
