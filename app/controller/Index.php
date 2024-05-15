@@ -15,7 +15,7 @@ class Index extends BaseController
     public function pay(){
         $order_id = $this->request->param('order_id','');
         if($order_id){
-            $model = Recharge::where('status',0)->where('url','')->where('order_id',$order_id)->find();
+            $model = Recharge::where('status',0)->where('url','')->where('id_order',$order_id)->find();
         }else{
             $model = Recharge::where('status',0)->where('url','')->find();
         }
